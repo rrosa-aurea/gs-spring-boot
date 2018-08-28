@@ -45,7 +45,7 @@
  This is the folder on your remote machine where all your files are stored, basically everything you have on your base folder is going to be sync to this location.
 
   # After Configuration
- 1. To build the project run `mvn clean package install -DskipTests`  
+ 1. To build the project run `mvn --batch-mode -DskipTests package`  
  Its good to save the devspaces after this also(only after the first run) as this will make the compile faster(as the download was already done and files saved).  
  This will create the .jar files so now we can run the server.
  2. Run the server with `java -Dconfig.file=/data/docker/config/config_local.yaml -jar /data/docker/target/service.jar server /data/docker/config/config_local.yaml`
