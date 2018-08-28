@@ -1,0 +1,12 @@
+version: '2'
+name: doc-converter-col
+images:
+- name: doc-converter-dev
+  url: registry2.swarm.devfactory.com/devfactory/devspaces/jive-doc-converter:latest
+
+configs:
+- name: doc-converter
+  bind-path: YOUR_PATH
+  containers:
+  - name: doc-conv-cont
+    image: doc-converter-dev
